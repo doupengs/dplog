@@ -35,8 +35,8 @@ Logger.info("123456789")
     Logger.LOG_FORMAT = '[%(levelname)s] %(asctime)s %(message)s'
       * 总的格式, 其中 %(message)s 包含了 filePath functionName lineNumber: message
     Logger.TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
-      * 时间的格
-    Logger.FULL_FILE_PATH = False
+      * 时间的格式
+    Logger.FULL_FILE_PATH = False
       * 是否使用绝对路径
   
  日志的默认输出级别
