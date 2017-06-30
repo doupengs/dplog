@@ -63,7 +63,7 @@ Logger.info("123456789")
     Logger.FILE_INFO    = None
     Logger.FILE_DEBUG   = None
     Logger.FILE_LOG     = None
-      * 只要以上五个参数补位None, 就表示日志写入文件
+      * 只要以上五个参数不为None, 就表示日志写入文件
       * 前四个是单独写入，例如把 [ERROR] 的日志写入 FILE_ERROR 中
       * FILE_LOG 则是全部记录
     Logger.FILE_MAX_BYTES    = 128*1024*1024
@@ -78,5 +78,7 @@ Logger.info("123456789")
 ## 其他修改颜色效果
 
 ![](/image/2.jpg)
+
+## 保存的日志
 
 ![](/image/3.jpg)
