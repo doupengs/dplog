@@ -82,3 +82,11 @@ Logger.info("123456789")
 ## 保存的日志
 
 ![](/image/3.jpg)
+
+## 安装
+
+```
+pip install dist/dplog-x.x.x.tar.gz
+或者
+python setup.py install
+```
