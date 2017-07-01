@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from dplog import Logger
+from dplog.dplog import Logger
 
 
 # ----参数含义参看 README.md----
