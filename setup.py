@@ -1,10 +1,7 @@
 # coding: utf-8
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-import dplog
+from setuptools import setup
+from dplog import dplog
 
 
 long_description = '''
@@ -37,11 +34,12 @@ setup(
     author="doupeng",
     author_email="doupeng1993@sina.com",
     url="https://github.com/doupengs/dplog",
-    py_modules=["dplog"],
+    #py_modules=['dplog'],
+    packages=['dplog'],
     description="Pretty simple easy-to-use log",
     long_description=long_description,
     license="Apache License 2.0",
-    platforms=["Linux"],
+    platforms=["Linux", "Windows"],
     classifiers=[
         "Programming Language :: Python :: 2",
         "Intended Audience :: Developers",
