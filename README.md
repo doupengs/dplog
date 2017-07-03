@@ -124,3 +124,7 @@ print_text('123456789')
 
 # 由于 Windows 中的一些IDE或者自带的IDLE, logging 打印都是默认的红色, 所以在CMD窗口下有效
 ```
+
+#### windows 下的效果
+
+![](/image/5.jpg)
