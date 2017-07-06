@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from setuptools import setup
-from dplog import dplog
+from dplog import __version__
 
 
 long_description = '''
@@ -30,11 +30,10 @@ Write a nice log with a small amount of code
 
 setup(
     name="dplog",
-    version=dplog.__version__,
+    version=__version__,
     author="doupeng",
     author_email="doupeng1993@sina.com",
     url="https://github.com/doupengs/dplog",
-    #py_modules=['dplog'],
     packages=['dplog'],
     description="Pretty simple easy-to-use log",
     long_description=long_description,
