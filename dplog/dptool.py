@@ -9,9 +9,9 @@ __LOCK = threading.Lock()
 
 def threadingLock(func):
     def inside(*args, **kwargs):
-        if __LOCK.acquire():
-            func(*args, **kwargs)
-            __LOCK.release()
+        __LOCK.acquire():
+        func(*args, **kwargs)
+        __LOCK.release()
     return inside
 
 def winAddColor(textColor=None, bgColor=None, style=None):
