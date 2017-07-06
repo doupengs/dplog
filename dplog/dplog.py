@@ -3,10 +3,10 @@
 import logging
 import logging.handlers
 import inspect
-from dpcolor import winAddColor
-from dpcolor import linuxAddColor
+from dptool import winAddColor
+from dptool import linuxAddColor
+from dptool import threadingLock
 
-__version__ = '0.0.2'
 
 class Logger(object):
     '''
@@ -137,6 +137,7 @@ class Logger(object):
         return "%s %s [line %d]: %s" % (filePath, funcName, lineNum, msg)
 
     @staticmethod
+    @threadingLock
     @winAddColor(COLOR_ERROR[0], COLOR_ERROR[1], COLOR_ERROR[2])
     def error(msg):
         cLogger, fLogger = Logger._initLogger('error')
@@ -149,6 +150,7 @@ class Logger(object):
             Logger.__F.error(msg)
 
     @staticmethod
+    @threadingLock
     @winAddColor(COLOR_WARNING[0], COLOR_WARNING[1], COLOR_WARNING[2])
     def warning(msg):
         cLogger, fLogger = Logger._initLogger('warning')
@@ -161,6 +163,7 @@ class Logger(object):
             Logger.__F.warning(msg)
 
     @staticmethod
+    @threadingLock
     @winAddColor(COLOR_INFO[0], COLOR_INFO[1], COLOR_INFO[2])
     def info(msg):
         cLogger, fLogger = Logger._initLogger('info')
@@ -173,6 +176,7 @@ class Logger(object):
             Logger.__F.info(msg)
 
     @staticmethod
+    @threadingLock
     @winAddColor(COLOR_DEBUG[0], COLOR_DEBUG[1], COLOR_DEBUG[2])
     def debug(msg):
         cLogger, fLogger = Logger._initLogger('debug')
