@@ -1,33 +1,33 @@
 # coding: utf-8
 
-from dplog.dplog import Logger
+from dplog import logger
 
 
 # ----参数含义参看 README.md----
-Logger.LOG_LEVEL         = 10
+logger.LOG_LEVEL         = 10
 # ----参数:输出到控制台(不建议修改)----
-Logger.IS_CONSOLE        = (True, True)
-Logger.COLOR_ERROR       = ('red', None, 'bold')
-Logger.COLOR_WARNING     = ('yellow', None, 'bold')
-Logger.COLOR_INFO        = ('cyan', None, 'bold')
-Logger.COLOR_DEBUG       = ('green', None, 'bold')
+logger.IS_CONSOLE        = (True, True)
+logger.COLOR_ERROR       = ('red', None, 'bold')
+logger.COLOR_WARNING     = ('yellow', None, 'bold')
+logger.COLOR_INFO        = ('cyan', None, 'bold')
+logger.COLOR_DEBUG       = ('green', None, 'bold')
 # ----参数:日志写入部分----
-Logger.FILE_ERROR        = None
-Logger.FILE_WARNING      = None
-Logger.FILE_INFO         = None
-Logger.FILE_DEBUG        = None
-Logger.FILE_LOG          = None
-Logger.FILE_MAX_BYTES    = 128*1024*1024
-Logger.FILE_BACKUP_COUNT = 10
+logger.FILE_ERROR        = None
+logger.FILE_WARNING      = None
+logger.FILE_INFO         = None
+logger.FILE_DEBUG        = None
+logger.FILE_LOG          = None
+logger.FILE_MAX_BYTES    = 128*1024*1024
+logger.FILE_BACKUP_COUNT = 10
 # ----参数:日志格式(不建议修改)----
-Logger.LOG_FORMAT        = '[%(levelname)s] %(asctime)s %(message)s'
-Logger.TIME_FORMAT       = "%Y-%m-%d %H:%M:%S"
-Logger.FULL_FILE_PATH    = False
+logger.LOG_FORMAT        = '[%(levelname)s] %(asctime)s %(message)s'
+logger.TIME_FORMAT       = "%Y-%m-%d %H:%M:%S"
+logger.FULL_FILE_PATH    = False
 
 
 if __name__ == '__main__':
-    Logger.error("123456789")
-    Logger.warning("123456789")
-    Logger.debug("123456789")
-    Logger.info("123456789")
+    logger.error("123456789")
+    logger.warning("123456789")
+    logger.debug("123456789")
+    logger.info("123456789")
 
