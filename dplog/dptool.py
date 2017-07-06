@@ -2,8 +2,17 @@
 
 import ctypes
 import platform
+import threading
 
 __SYSTEM = platform.system()
+__LOCK = threading.Lock()
+
+def threadingLock(func):
+    def inside(*args, **kwargs):
+        if __LOCK.acquire():
+            func(*args, **kwargs)
+            __LOCK.release()
+    return inside
 
 def winAddColor(textColor=None, bgColor=None, style=None):
     '''
